@@ -1,0 +1,19 @@
+SHADOW CLIENT – BRANDING UPDATE
+
+Die sichtbare Hauptueberschrift wurde von NoRiskClient auf Shadow Client geaendert.
+
+TEST DER OBERFLAECHE:
+1. ZIP entpacken.
+2. CMD im Ordner oeffnen.
+3. npm install
+4. npm install -g yarn (falls noch nicht vorhanden)
+5. npm run dev
+6. Die von Vite angezeigte lokale Adresse im Browser oeffnen.
+
+MICROSOFT-LOGIN:
+Der originale Login-Button und seine Implementierung sind im Quellcode enthalten, aber nicht neu implementiert oder getestet.
+Microsoft-Login benoetigt eine funktionierende native Tauri-App und ggf. eigene OAuth-/Backend-Konfiguration.
+In der reinen Browser-Vorschau ist kein echter Minecraft-Login garantiert.
+
+HINWEIS: Einige NoRisk-Funktionen, Marken und Server-Abhaengigkeiten sind weiterhin im Projekt enthalten.
+Dieses ZIP ist Quellcode, keine fertige EXE.

@@ -1,0 +1,18 @@
+SHADOW CLIENT – WINDOWS BUILD OHNE LOKALES RUST
+
+1. Entpacke diese ZIP auf deinem PC.
+2. Erstelle ein PRIVATES Repository auf github.com.
+3. Lade den Quellcode hoch, inklusive verstecktem Ordner .github.
+   Nicht hochladen: node_modules, .env, Zugangsdaten, Token.
+   GitHub Browser-Upload kann bei vielen Dateien scheitern; nutze dann GitHub Desktop.
+4. Öffne im Repository Actions -> Shadow Client - Windows Test Build -> Run workflow.
+5. Wenn der Build erfolgreich ist: Workflow-Durchlauf -> Artifacts -> Shadow-Client-Windows.
+6. Entpacke das Artifact und starte den Installer.
+
+WICHTIG: Dies ist eine BUILD-VORBEREITUNG, keine fertige EXE.
+Die Original-Codebasis nutzt weiterhin NoRisk-spezifische Dienste und native Abhaengigkeiten.
+Der Build kann fehlschlagen. Ein erfolgreicher Build garantiert noch KEINEN
+funktionierenden Microsoft-Login oder Minecraft-Start. Gib niemals dein
+Microsoft-Passwort direkt in einen selbstgebauten Launcher ein.
+
+Bei Fehler: Actions -> fehlgeschlagener Lauf -> Build Windows desktop app -> Log kopieren.

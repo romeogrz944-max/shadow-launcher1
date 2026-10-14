@@ -1,0 +1,8 @@
+Shadow Client – Browser-Login-Fehlerbehandlung
+
+Die localhost-Vorschau ist kein vollständiger Launcher.
+Microsoft-Login braucht die native Tauri-App und den vorhandenen Rust-Backend-Code.
+Diese Änderung zeigt eine deutliche Browser-Warnung und verhindert den Login-Aufruf ohne Tauri.
+Es wurde KEIN funktionierender Desktop-Login oder Minecraft-Start verifiziert.
+
+Zum Test der Vorschau: npm install, npm install -g yarn, npm run dev

@@ -1,0 +1,16 @@
+SHADOW CLIENT - PROJEKTSTRUKTUR REPARIERT
+
+Diese ZIP ist der komplette Projektquellcode (KEINE fertige EXE).
+Die vorher fehlenden Ordner src-tauri/crates, src-tauri/src, scripts, src sind enthalten.
+Die versehentlich ins Hauptverzeichnis verschobenen Rust-Dateien sind wieder unter src-tauri.
+
+GITHUB ANLEITUNG:
+1. Ein NEUES, leeres GitHub-Repository erstellen, z.B. shadow-client-fixed.
+2. Diese ZIP entpacken. Den INHALT des entpackten Ordners ins neue Repository hochladen.
+   Wichtig: src-tauri, src, scripts, package.json muessen DIREKT im Repository liegen.
+3. GitHub > Actions > Shadow Client Windows > Run workflow.
+4. Bei Erfolg unter Actions > letzter Lauf > Artifacts den Windows-Installer herunterladen.
+
+HINWEIS: Build wurde in dieser Umgebung NICHT unter Windows ausgefuehrt.
+Weitere Fehler (Abhaengigkeiten, native Bibliotheken, API-Dienste) sind moeglich.
+Es handelt sich weiterhin um eine auf NoRisk basierende Quellcode-Version.
