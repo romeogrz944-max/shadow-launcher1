@@ -1,0 +1,27 @@
+
+name: Shadow Client Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build Windows launcher
+        run: yarn tauri build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Shadow-Client-Windows
+          path: src-tauri/target/release/bundle/
+          if-no-files-found: error
+  
