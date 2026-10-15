@@ -1,1 +1,40 @@
+name: Shadow Client Windows
 
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Projekt herunterladen
+        uses: actions/checkout@v4
+
+      - name: Node.js installieren
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rust installieren
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Yarn installieren
+        run: npm install -g yarn
+
+      - name: Abhängigkeiten installieren
+        run: yarn install
+
+      - name: Windows Launcher bauen
+        run: yarn tauri build
+
+      - name: Installer speichern
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Shadow-Client-Windows
+          path: |
+            src-tauri/target/release/bundle/**
+            target/release/bundle/**
